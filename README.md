@@ -15,13 +15,13 @@ To run this application on your local environment, you must have the following i
 1. Clone this repository to your local machine using the following command in your terminal:
 
 ```
-git clone ... https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git clone https://github.com/eepolanco/drawappdemo
 ```
 
 2. Navigate to the project directory:
 
 ```
-cd YOUR-REPOSITORY
+cd drawappdemo
 ```
 
 3. Install the Node.js dependencies:
