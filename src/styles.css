@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-purple/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+body {
+    font-family: var(--font-family);
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+button.p-button-secondary .pi {
+    margin-right: 10px;
+}
+
+button.p-button-primary .pi {
+    margin-right: 10px;
+}

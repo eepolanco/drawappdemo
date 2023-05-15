@@ -1,0 +1,87 @@
+<div class="p-dialog-content mb-3">
+  <form [formGroup]="tableForm" (ngSubmit)="onSubmit()" class="p-fluid">
+    <div class="p-field">
+      <label for="table" class="p-d-block">Nombre de la tabla:</label>
+      <input
+        type="text"
+        id="table"
+        formControlName="table"
+        pInputText
+        ngDefaultControl
+      />
+    </div>
+
+    <div formArrayName="keys">
+      <div class="mb-3" *ngFor="let key of keys.controls; let i = index">
+        <hr />
+        <div [formGroupName]="i" class="p-grid p-nogutter">
+          <div class="mt-2" style="display: flex; align-items: center">
+            <i class="pi pi-key" style="margin-right: 5px"></i>
+            <p-inputSwitch formControlName="isPrimaryKey"></p-inputSwitch>
+          </div>
+          <div class="row g-3 mb-2">
+            <div class="col">
+              <div class="p-col-4 p-md-2">
+                <label for="keyName">Key Name:</label>
+              </div>
+              <div class="p-col-8 p-md-4">
+                <input
+                  type="text"
+                  id="keyName"
+                  formControlName="keyName"
+                  pInputText
+                  class="w-100"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="p-col-4 p-md-2">
+                <label for="type">Tipo:</label>
+              </div>
+              <div class="p-col-8 p-md-4">
+                <div class="p-d-flex">
+                  <p-dropdown
+                    appendTo="body"
+                    formControlName="type"
+                    [options]="types"
+                    placeholder="Selecciona un tipo"
+                    class="w-100 p-ml-auto"
+                  ></p-dropdown>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              pButton
+              class="p-button-icon-only p-button-danger"
+              (click)="removeKey(i)"
+            >
+              <i class="pi pi-trash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="p-dialog-footer mt-5" style="text-align: center">
+  <button
+    class="p-button-secondary"
+    type="button"
+    pButton
+    label="Agregar nueva columna"
+    (click)="addKey()"
+    style="margin-right: 10px"
+  ></button>
+  <button
+    type="button"
+    (click)="onSubmit()"
+    pButton
+    label="Guardar tabla"
+    style="margin-left: 10px"
+  ></button>
+</div>
+
+<p-toast position="top-center"></p-toast>

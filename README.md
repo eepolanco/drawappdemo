@@ -1,27 +1,48 @@
-# DrawsqlDemo
+# README
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+This project is an application inspired by DrawSQL, built with Angular 16 and uses the `json-server` package for database storage.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To run this application on your local environment, you must have the following installed:
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/en/) (version 12 or higher)
+- [Angular CLI](https://angular.io/cli) (version 16 or higher)
+- [json-server](https://github.com/typicode/json-server) (to run the database server)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+1. Clone this repository to your local machine using the following command in your terminal:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+git clone ... https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+```
 
-## Running unit tests
+2. Navigate to the project directory:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+cd YOUR-REPOSITORY
+```
 
-## Running end-to-end tests
+3. Install the Node.js dependencies:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+npm install
+```
 
-## Further help
+## Running the Application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Start the database server in a terminal using the following command:
+
+```
+npm run startDb
+```
+
+2. In another terminal, start the application with Angular CLI:
+
+```
+ng serve
+```
+
+3. Open a web browser and go to `http://localhost:4200/` to view the application.
+4. Open a web browser and go to `http://localhost:3000/` to view the db config and all the methods available.

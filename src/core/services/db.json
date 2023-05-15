@@ -1,0 +1,25 @@
+{
+  "tables": [
+    {
+      "table": "MyTable",
+      "keys": [
+        {
+          "keyName": "test",
+          "type": "string",
+          "isPrimaryKey": true
+        },
+        {
+          "keyName": "MyNewKeyName",
+          "type": "boolean",
+          "isPrimaryKey": true
+        },
+        {
+          "keyName": "AnotherKey",
+          "type": "string",
+          "isPrimaryKey": false
+        }
+      ],
+      "id": 1
+    }
+  ]
+}

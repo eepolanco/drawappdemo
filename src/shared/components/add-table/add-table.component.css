@@ -1,0 +1,29 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.col {
+  flex: 1;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.dropdown-container {
+    width: 100%;
+  }
+  
+
+  input[type="text"].p-inputtext.ng-touched.ng-invalid {
+    border-color: red;
+  }
+  
+  input[type="text"].p-inputtext.ng-touched.ng-invalid:focus {
+    outline-color: red;
+  }
+
+  .p-dropdown.p-component.p-dropdown-open {
+    border: 1px solid red
+  }

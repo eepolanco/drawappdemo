@@ -1,0 +1,29 @@
+<p-accordion [multiple]="true" *ngIf="items.length">
+    <ng-container *ngFor="let item of items; let idx = index">
+        <button style="height: 59px;" pButton icon="pi pi-trash" class="p-button-danger p-button-outlined" (click)="removeItem(idx, item.id)" style="float: right;"></button>
+      <p-accordionTab [header]="item.table">
+        <p>Columnas:</p>
+        <ul class="w-100">
+          <li *ngFor="let key of item.keys; let j = index" class="w-100">
+            <div class="row mb-2">
+              <div class="col-md-6 mb-1">
+                <input placeholder="MyKeyName" pInputText type="text" [(ngModel)]="key.keyName" class="my-1" appMinLength="3" />
+              </div>
+              <div class="col-md-6 mb-1" style="width: 130px;" >
+                <p-dropdown [options]="types" [(ngModel)]="key.type" class="my-1"></p-dropdown>
+              </div>
+              <div class="col-md-6 mb-1" style="flex-direction: column;">
+                <i class="pi pi-key" style="margin-right: 5px;"></i>
+                <p-inputSwitch [(ngModel)]="key.isPrimaryKey" class="my-1"></p-inputSwitch>
+              </div>
+            </div>
+          </li>
+          <hr class="my-1">
+        </ul>
+        <div class="col-md-6 mb-1">
+            <button pButton (click)="addKey(idx, item.id)" label="Agregar columna" icon="pi pi-plus" class="my-1"></button>
+        </div>
+      </p-accordionTab>
+    </ng-container>
+  </p-accordion>
+  <p-toast position="bottom-right"></p-toast>
