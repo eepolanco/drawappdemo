@@ -58,7 +58,7 @@ export class AddTableComponent implements OnInit {
     if (this.tableForm.valid) {
       this.tableService.postNewTable(this.tableForm.value).subscribe({
         next: (resp) => {
-          this.ref.close(this.tableForm.value);
+          this.ref.close(resp);
         }, 
         error: (error) => {
         this.messageService.add({
